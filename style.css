@@ -1,0 +1,1555 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+body {
+    background: white;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    overflow-x: hidden;
+    line-height: 1.5;
+}
+
+header {
+    width: 100%;
+    padding-top: 5vh;
+    
+    background: #584CEA;
+    
+    color: white;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.header-content {
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    z-index: 9999999;
+}
+
+.header-content h2 {
+    text-transform: uppercase;
+    transition: 0.3s opacity ease;
+}
+.header-content h2 span {
+    color: #F70069;
+    padding: 0 5px;
+}
+.header-content h2:hover {
+    opacity: 0.8;
+}
+.header-content h2 a, .language a {
+    text-decoration: none;
+    color: white;
+}
+.language a, .language p {
+    display: inline;
+	font-size: 14px;
+    opacity: 0.5;
+    transition: 0.3s opacity ease;
+}
+.language a:hover {
+    opacity: 1;
+}
+.language span {
+    width: 2px;
+    height: 10px;
+    background-color: white;
+}
+.language .language-active {
+	opacity: 1;
+}
+
+/* SIDE NAV */
+
+/*.outer-menu {
+	z-index: 999999999999999;
+}
+.menu {
+  -webkit-filter: url("#shadowed-goo");
+          filter: url("#shadowed-goo");
+}
+.menu-item, .menu-open-button {
+    background: #F70069;
+    border-radius: 100%;
+    width: 60px;
+    height: 60px;
+    margin-left: -20px;
+    position: absolute;
+    top: 25px;
+    color: white;
+    text-align: center;
+    line-height: 60px;
+    -webkit-transition: -webkit-transform ease-out 200ms;
+    transition: -webkit-transform ease-out 200ms;
+    transition: transform ease-out 200ms;
+    transition: transform ease-out 200ms, -webkit-transform ease-out 200ms;
+}
+
+.menu-open-button {
+    background: #847DDF;
+    width: 64px;
+    height: 56px;
+    margin-left: -23px;
+    margin-top: -5px;
+    
+}
+.menu-open {
+    display: none;
+}
+.menu-item img {
+    height: 35px;
+    width: auto;
+    margin-top: 12.5px;
+}
+.hamburger {
+  width: 25px;
+  height: 3px;
+  background: white;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -12.5px;
+  margin-top: -1.5px;
+  -webkit-transition: -webkit-transform 200ms;
+  transition: -webkit-transform 200ms;
+  transition: transform 200ms;
+  transition: transform 200ms, -webkit-transform 200ms;
+}
+
+.hamburger-1 {
+  -webkit-transform: translate3d(0, -8px, 0);
+          transform: translate3d(0, -8px, 0);
+}
+
+.hamburger-2 {
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+}
+
+.hamburger-3 {
+  -webkit-transform: translate3d(0, 8px, 0);
+          transform: translate3d(0, 8px, 0);
+}
+
+.menu-open:checked + .menu-open-button .hamburger-1 {
+  -webkit-transform: translate3d(0, 0, 0) rotate(45deg);
+          transform: translate3d(0, 0, 0) rotate(45deg);
+}
+.menu-open:checked + .menu-open-button .hamburger-2 {
+  -webkit-transform: translate3d(0, 0, 0) scale(0.1, 1);
+          transform: translate3d(0, 0, 0) scale(0.1, 1);
+}
+.menu-open:checked + .menu-open-button .hamburger-3 {
+  -webkit-transform: translate3d(0, 0, 0) rotate(-45deg);
+          transform: translate3d(0, 0, 0) rotate(-45deg);
+}
+
+.menu-item:hover {
+  background: #847DDF;
+}
+.open .menu-item:hover {
+  background: inherit;
+}
+.menu-item:nth-child(3) {
+  -webkit-transition-duration: 180ms;
+          transition-duration: 180ms;
+}
+.menu-item:nth-child(4) {
+  -webkit-transition-duration: 180ms;
+          transition-duration: 180ms;
+}
+.menu-item:nth-child(5) {
+  -webkit-transition-duration: 180ms;
+          transition-duration: 180ms;
+}
+.menu-item:nth-child(6) {
+  -webkit-transition-duration: 180ms;
+          transition-duration: 180ms;
+}
+
+.menu-open-button {
+  z-index: 2;
+  -webkit-transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+          transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  -webkit-transition-duration: 400ms;
+          transition-duration: 400ms;
+  -webkit-transform: scale(1, 1) translate3d(0, 0, 0);
+          transform: scale(1, 1) translate3d(0, 0, 0);
+  cursor: pointer;
+}*/
+/*
+.menu-open:checked + .menu-open-button {
+  -webkit-transition-timing-function: linear;
+          transition-timing-function: linear;
+  -webkit-transition-duration: 200ms;
+          transition-duration: 200ms;
+  -webkit-transform: scale(0.8, 0.8) translate3d(0, 0, 0);
+          transform: scale(0.8, 0.8) translate3d(0, 0, 0);
+  opacity: 0.6;
+}*/
+/*
+.menu-open:checked ~ .menu-item {
+  -webkit-transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+          transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+.menu-open:checked ~ .menu-item:nth-child(3) {
+  -webkit-transition-duration: 190ms;
+          transition-duration: 190ms;
+  -webkit-transform: translate3d(0, 80px, 0);
+          transform: translate3d(0, 80px, 0);
+}
+.menu-open:checked ~ .menu-item:nth-child(4) {
+  -webkit-transition-duration: 290ms;
+          transition-duration: 290ms;
+  -webkit-transform: translate3d(0, 160px, 0);
+          transform: translate3d(0, 160px, 0);
+}
+.menu-open:checked ~ .menu-item:nth-child(5) {
+  -webkit-transition-duration: 390ms;
+          transition-duration: 390ms;
+  -webkit-transform: translate3d(0, 240px, 0);
+          transform: translate3d(0, 240px, 0);
+}
+.menu-open:checked ~ .menu-item:nth-child(6) {
+  -webkit-transition-duration: 490ms;
+          transition-duration: 490ms;
+  -webkit-transform: translate3d(0, 320px, 0);
+          transform: translate3d(0, 320px, 0);
+}
+
+.menu {
+  box-sizing: border-box;
+  font-size: 20px;
+  text-align: left;
+  padding-top: 30px;
+  padding-left: 10px;
+  height: 100vh;
+}*/
+/*
+.outer-menu.open .menu, .outer-menu.closing .menu {
+  -webkit-filter: none;
+          filter: none;
+}*/
+/*
+.outer-menu.closing .bg-radial {
+  z-index: 1111;
+}*/
+/*
+.outer-menu {
+  position: absolute;
+  right: 0px;
+  width: 84px;
+  height: 100%;
+}
+
+.header-content .filter {
+	position: absolute;
+}
+
+.invisible {
+	background: transparent;
+}*/
+
+
+/* ---- particles.js container ---- */
+
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: none;
+    background-size: cover;
+    background-position: 50% 50%;
+    z-index: 99999;
+}
+
+/* MAIN - PRESENTATION */
+
+#presentation {
+    position: relative;
+    width: 100%;
+    padding-top: 45.1%;
+    
+	background: #584CEA;
+    box-sizing: border-box;
+    color: white;
+}
+#presentation .text {
+    position: absolute;
+    width: 34%;
+    top: 20%;
+    left: 15%;
+    bottom: 0;
+    right: 0;
+    overflow: hidden;
+    z-index: 9999999999999;
+}
+
+#presentation h1 {
+	font-size: 60px;
+    font-weight: 700;
+    
+}
+#presentation h4 {
+	font-size: 18px;
+    color: lightgray;
+    line-height: 2;
+    
+    padding-top: 4vh;
+    padding-bottom: 6vh;
+    //max-width: 34%;
+}
+.btn {
+    height: 50px;
+    width: 180px;
+    border: none;
+    border-radius: 50px;
+    
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    line-height: 50px;
+    font-size: 14px;
+    text-transform: uppercase;
+    
+    cursor: pointer;
+}
+.btn-primary {    
+    background: #847DDF;
+    box-shadow: -4px 8px 40px rgba(0, 0, 0, 0.11);
+    transition: 0.3s filter linear, 0.3s box-shadow linear;
+}
+
+.btn-nocolor {    
+    background: transparent;
+}
+.btn-primary:hover {
+    filter: brightness(109%);
+    box-shadow: -1px 4px 30px rgba(0, 0, 0, 0.08);
+}
+#presentation .btn-nocolor {    
+    margin-left: 10px;
+}
+ .arrow-down {
+    position: absolute;
+    right: 5%;
+    bottom: 14vh;
+    
+    background: transparent;
+    border: none;
+    
+    color: white;
+    
+    cursor: pointer;
+}
+.arrow-down img {
+    height: 30px;
+    width: auto;
+}
+
+/* WAVES */
+
+@keyframes move_wave {
+  0% {
+    transform: translateX(0) translateZ(0) scaleY(1);
+  }
+  50% {
+    transform: translateX(-25%) translateZ(0) scaleY(0.55);
+  }
+  100% {
+    transform: translateX(-50%) translateZ(0) scaleY(1);
+  }
+}
+.wave-wrapper {
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    margin: auto;
+}
+.wave-wrapper-inner {
+    position: absolute;
+    width: 100%;
+    overflow: hidden;
+    height: 100%;
+}
+.bg-top {
+    z-index: 15;
+    opacity: 0.5;
+
+}
+.bg-middle {
+    z-index: 10;
+    opacity: 0.75;
+}
+.bg-bottom {
+    z-index: 5;
+}
+.wave {
+    position: absolute;
+    left: 0;
+    width: 200%;
+    height: 100%;
+    background-repeat: repeat no-repeat;
+    background-position: 0 bottom;
+    transform-origin: center bottom;
+    bottom: -1px;
+}
+.wave-top {
+    background-size: 50% 120px;
+    background-image: url('img/b.png');
+}
+.wave-animation .wave-top {
+    animation: move-wave 3s;
+    -webkit-animation: move-wave 3s;
+    -webkit-animation-delay: 1s;
+    animation-delay: 1s;
+}
+.wave-middle {
+    background-size: 50% 120px;
+    background-image: url('img/c.png');
+}
+.wave-animation .wave-middle {
+    animation: move_wave 10s linear infinite;
+}
+.wave-bottom {
+    background-size: 50% 100px;
+    background-image: url('img/a.png');
+}
+.wave-animation .wave-bottom {
+    animation: move_wave 15s linear infinite;
+}
+
+/* PROMISES */
+
+#promises {
+    position: relative;
+    width: 100%;
+    padding-bottom: 5vh;
+    
+	background: white;
+    box-sizing: border-box;
+    color: #584CEA; 
+}
+#promises h2 {
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center;
+}
+.container-promises {
+	width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    
+    display: flex;
+    flex-flow: row wrap;
+}
+#promises figure {
+    width: 26%;
+    
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 10vh;
+    
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+#promises figure img {
+    height: 80px;
+}
+#promises figcaption {
+    margin-top: 40px;
+    font-weight: 700;
+    text-align: center;
+    position: relative;
+    font-size: 20px;
+}
+#promises figcaption span {
+    padding-top: 10px;
+    display: block;
+    font-weight: 400;
+    color: gray;
+    font-size: 16px;
+}
+
+/* PORTFOLIO */
+
+#portfolio {
+    position: relative;
+    width: 100%;
+    padding-bottom: 14vh;
+    
+	background: white;
+    box-sizing: border-box;
+    color: #584CEA; 
+}
+.portfolio-arrow-left {
+    position: absolute;
+    left: -56%;
+    top: 45%;
+    
+    height: 40px;
+    width: auto;
+    
+    transform: rotate(180deg);
+}
+.portfolio-arrow-right {
+    position: absolute;
+    right: -12%;
+    top: 45%;
+    
+    height: 40px;
+    width: auto;
+}
+
+#portfolio h2 {
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center;
+}
+.slide {
+	width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    
+    display: flex;
+    
+    position: relative;
+}
+.portfolio-leftside {
+	width: 90%;
+	padding-right: 5%;
+}
+.portfolio-leftside img {
+	width: 100%;
+}
+.portfolio-rightside {
+	width: 90%;
+	height: 100%;
+}
+.portfolio-rightside h3 {
+    font-size: 20px;
+    font-weight: 700;
+}
+.portfolio-rightside p {
+    padding-top: 20px;
+    padding-bottom: 30px;
+    display: block;
+    font-weight: 400;
+    color: gray;
+    font-size: 16px;
+}
+.portfolio-rightside a {
+	text-decoration: none;
+    color: #584CEA;
+}
+.portfolio-rightside a img {
+	height: 16px;
+    padding-left: 10px;
+}
+.portfolio-rightside ul {
+	padding-top: 30px;
+}
+.portfolio-rightside ul li {
+	display: inline;
+    
+    color: gray;
+    font-size: 12px;
+    
+    border-right: 1px solid gray;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+.portfolio-rightside ul li:first-child {
+    padding-left: 0;
+}
+.portfolio-rightside ul li:last-child {
+    border: none;
+}
+
+/* PORTFOLIO SLIDER */
+#slideshow {
+    position: relative;
+    padding-top: 17%; 
+}
+#slideshow > div {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      right: 0px;
+      bottom: 0px;
+}
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    margin-top: 4%;
+    background-color: lightgray;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+    background-color: gray;
+}
+
+/* CONTACT */
+
+#contact {
+    position: relative;
+    width: 100%;
+    padding-bottom: 9vh;
+    padding-top: 4vh;
+    
+	background: #584CEA;
+    box-sizing: border-box;
+    
+    color: white;
+}
+
+#contact h4 {
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    padding-left: 15%;
+    
+    font-size: 60px;
+    font-weight: 700;
+    
+    position: relative;
+}
+
+.contact-form {
+	padding-left: 15%;
+    width: 50%;
+}
+.inputs-2 {
+	display: flex;
+    flex-flow: row wrap;
+}
+.input-container {
+	width: 42.5%;
+}
+.input-text {
+	width: 75%;
+    margin-right: 0%;
+}
+.input-text-message {
+	width: 75%;
+}
+label {
+    display: block;
+    padding-bottom: 10px;
+}
+input, textarea {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid white;
+    height: 40px;
+    margin-bottom: 50px;
+    font-size: 14px;
+}
+input[type="text"], input[type="email"],
+textarea[type="text"] {
+    color: white;
+    font-size: 18px;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.5;
+}
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #847DDF;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: #847DDF;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: #847DDF;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: #847DDF;
+}
+
+textarea {
+    height: auto;
+}
+
+.message-sent {
+	color: #41FFC9;
+}
+
+/* FORM ERRORS */
+
+.label-error {
+	color: #F70069;
+}
+.input-error {
+	border-bottom: 1px solid #F70069;
+}
+
+/* CONTACT INFO */
+
+.info {
+    width: 40%;
+    position: absolute;
+    top: 43%;
+    left: 65%;
+}
+.info figure {
+    display: flex;
+    
+    padding-bottom: 30px;
+}
+.info img {
+    height: 20px;
+}
+.info figcaption {
+    padding-left: 20px;
+}
+.info .social-icons {
+	padding-top: 12%;
+    height: 24px;
+    left: 40px;
+}
+.info .social-icons svg {
+    height: 27px;
+    width: auto;
+    padding-left: 20px;
+}
+.info .social-icons svg path {
+    transition: 0.2s all linear;
+}
+svg:hover path {
+    fill: #F70069;
+}
+
+
+/* FOOTER */
+
+footer {
+    position: relative;
+    width: 100%;
+    padding-bottom: 20px;
+    padding-left: 15%;
+    background: #584CEA;
+    
+    font-size: 14px;
+    color: white;
+}
+
+
+/***********************/
+/*    MEDIA QUERIES    */
+
+@media screen and (max-width: 1700px) and (orientation: landscape) {
+    
+    /* MAIN - PRESENTATION */
+
+    #presentation .text {
+        top: 17%;
+    }
+    #presentation h1 {
+        font-size: 56px;
+    }
+    #presentation h4 {
+        padding-top: 3vh;
+        padding-bottom: 4vh;
+    }
+    #promises {
+        padding-bottom: 4vh;
+    }
+    #promises h2 {
+        padding-top: 8vh;
+        padding-bottom: 10vh;
+    }
+    .container-promises {
+        width: 70%;
+    }
+    #promises figure {
+        padding-bottom: 8vh;
+    }
+    #contact {
+        padding-bottom: 8vh;
+        padding-top: 3vh;
+    }
+    #contact h4 {
+        padding-top: 8vh;
+        font-size: 56px;
+    }
+}
+
+@media screen and (max-width: 1600px) and (orientation: landscape) {
+    #presentation .text {
+        width: 55%;
+    }
+    #presentation h1 {
+        font-size: 50px;
+    }
+    header {
+        padding-top: 3.5vh;
+        font-size: 26px;
+    }
+    #presentation h4 {
+        font-size: 16px;
+        padding-top: 2.5vh;
+        padding-bottom: 4vh;
+    }
+    .btn {
+        height: 45px;
+        width: 175px;
+        border-radius: 45px;
+        line-height: 45px;
+        font-size: 13px;
+    }
+    #contact h4 {
+        padding-top: 7vh;
+        font-size: 50px;
+    }
+}
+
+@media screen and (max-width: 1400px) and (orientation: landscape) {
+    .container-promises {
+        width: 75%;
+    }
+    .info {
+        top: 38%;
+    }
+}
+@media screen and (max-width: 1280px) and (orientation: landscape) {
+    .container-promises {
+        width: 80%;
+    }
+    .info {
+        top: 35%;
+    }
+}
+@media screen and (max-width: 1024px) and (orientation: landscape) {
+    #presentation .text {
+        top: 18%;
+    }
+    #presentation h1 {
+        font-size: 38px;
+    }
+    header {
+        padding-top: 3.5vh;
+        font-size: 22px;
+    }
+    #presentation h4 {
+        font-size: 13px;
+        padding-top: 2vh;
+        padding-bottom: 3vh;
+    }
+    .btn {
+        height: 40px;
+        width: 160px;
+        border-radius: 40px;
+        line-height: 40px;
+        font-size: 12px;
+    }
+    .container-promises {
+        width: 90%;
+    }
+    #promises figure img {
+        height: 60px;
+    }
+    #promises figcaption {
+        margin-top: 35px;
+        font-size: 18px;
+    }
+    #promises figcaption span {
+        font-size: 14px;
+    }
+    #promises h2 {
+        padding-top: 6vh;
+        padding-bottom: 8vh;
+
+        font-size: 28px;
+    }
+    #promises figure {
+        width: 29%;
+    }
+    #portfolio h2 {
+	   font-size: 28px;
+    }
+    .slide {
+	   width: 90%;
+    }
+    #contact h4 {
+        padding-left: 5%;
+    }
+    .contact-form {
+        padding-left: 5%;
+        width: 70%;
+    }
+    footer {
+        padding-left: 5%;
+        font-size: 12px;
+    }
+    #contact h4 {
+        padding-top: 5vh;
+        font-size: 40px;
+    }
+    .portfolio-rightside ul {
+        padding-top: 15px;
+    }
+    .portfolio-rightside p {
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+    input[type="text"], input[type="email"],
+    textarea[type="text"], label {
+        color: white;
+        font-size: 14px;
+    }
+    input {
+        height: 34px;
+    }
+    .info .social-icons svg {
+        height: 22px;
+        padding-left: 16px;
+    }
+    .info {
+        font-size: 14px;
+    }
+    .info img {
+        height: 18px;
+    }
+    .portfolio-rightside p {
+        font-size: 14px;
+    }
+    .portfolio-rightside a strong {
+        font-size: 14px;
+    }
+    #presentation {
+    padding-top: 55%;
+    }
+    .dot {
+        height: 10px;
+        width: 10px;
+    }
+    .wave-top {
+        background-size: 70% 110px;
+    }
+    .wave-middle {
+        background-size: 60% 110px;
+    }
+    .wave-bottom {
+        background-size: 60% 70px;
+    }
+}
+@media screen and (max-width: 860px) and (orientation: landscape) {
+    #presentation .text {
+        top: 14%;
+    }
+    .wave {
+        width: 300%;
+    }
+    .wave-top {
+        background-size: 50% 90px;
+    }
+    .wave-middle {
+        background-size: 50% 90px;
+    }
+    .wave-bottom {
+        background-size: 50% 70px;
+    }
+    header {
+        font-size: 20px;
+    }
+    .language a, .language p {
+        font-size: 11px;
+    }
+    #promises h2 {
+        font-size: 24px;
+    }
+    #portfolio h2 {
+	   font-size: 24px;
+        padding-top: 6vh;
+    }
+    #contact h4 {
+        padding-top: 5vh;
+        font-size: 36px;
+    }
+    .info figure {
+        padding-bottom: 20px;
+    }
+    #promises figure img {
+        height: 45px;
+    }
+    #promises figcaption {
+        margin-top: 25px;
+        font-size: 16px;
+    }
+    .portfolio-rightside h3 {
+        font-size: 18px;
+    }
+    .portfolio-rightside p {
+        font-size: 13px;
+    }
+    .portfolio-rightside ul li {
+        font-size: 10px;
+    }
+    .message-sent {
+        font-size: 13px;
+    }
+}
+@media screen and (max-width: 750px) and (orientation: landscape) {
+    #presentation h1 {
+        font-size: 32px;
+    }
+    .btn {
+        height: 37px;
+        width: 150px;
+        border-radius: 37px;
+        line-height: 37px;
+        font-size: 11px;
+    }
+    .arrow-down img {
+        height: 25px;
+    }
+    #presentation .text {
+        width: 65%;
+    }
+    footer {
+        font-size: 10px;
+    }
+}
+@media screen and (max-width: 670px) and (orientation: landscape) {
+    #presentation h1 {
+        font-size: 30px;
+    }
+    #presentation .text {
+        top: 12%;
+    }
+    #contact h4 {
+        font-size: 31px;
+    }
+    input[type="text"], input[type="email"],
+    textarea[type="text"], label {
+        color: white;
+        font-size: 12px;
+    }
+    input {
+        height: 24px;
+    }
+    .info .social-icons svg {
+        height: 18px;
+        padding-left: 12px;
+    }
+    .info {
+        font-size: 12px;
+    }
+    .info img {
+        height: 16px;
+    }
+    .portfolio-rightside p {
+        font-size: 12px;
+    }
+    .portfolio-rightside a strong {
+        font-size: 12px;
+    }
+    #presentation {
+        padding-top: 50%;
+    }
+    .contact-form {
+        width: 80%;
+    }
+    input, textarea {
+        margin-bottom: 30px;
+    }
+}
+@media screen and (max-width: 640px) and (orientation: landscape) {
+    #presentation h1 {
+        font-size: 26px;
+    }
+    #presentation h4 {
+        font-size: 12px;
+    }
+    .btn {
+        height: 33px;
+        width: 130px;
+        border-radius: 33px;
+        line-height: 33px;
+        font-size: 10.5px;
+    }
+    .wave-top {
+        background-size: 50% 60px;
+    }
+    .wave-middle {
+        background-size: 50% 60px;
+    }
+    .wave-bottom {
+        background-size: 50% 40px;
+    }
+    .info {
+        top: 30%;
+        left: 63%;
+    }
+    .info figure {
+        padding-bottom: 16px;
+        font-size: 11px;
+    }
+    .info img {
+        height: 14px;
+    }
+    header {
+        font-size: 16px;
+    }
+    .arrow-down img {
+        height: 20px;
+    }
+    #promises h2, #portfolio h2 {
+        font-size: 20px;
+    }
+    #promises figcaption {
+        margin-top: 20px;
+        font-size: 16px;
+    }
+    #promises figcaption span {
+        font-size: 12px;
+    }
+}
+@media screen and (max-width: 550px) and (orientation: landscape) {
+    #presentation .text {
+        top: 15%;
+    }
+    #presentation h1 {
+        font-size: 22px;
+    }
+    #presentation .text {
+        width: 80%;
+    }
+    .wave-top {
+        background-size: 50% 40px;
+    }
+    .wave-middle {
+        background-size: 50% 40px;
+    }
+    .wave-bottom {
+        background-size: 50% 20px;
+    }
+}
+@media screen and (orientation: portrait), 
+    screen and (max-width: 500px) and (orientation: landscape)) {
+    .wave-wrapper {
+        display: none;
+    }
+    header {
+        padding-top: 2vh;
+        font-size: 20px;
+    }
+    #presentation {
+        padding-top: 105%;
+    }
+    #presentation .text {
+        width: 90%;
+        top: 18%;
+    }
+    #presentation h1 {
+        font-size: 38px;
+    }
+    #presentation h4 {
+        font-size: 16px;
+        padding-bottom: 4vh;
+        max-width: 80%;
+    }
+    .btn {
+        height: 45px;
+        width: 170px;
+        border-radius: 50px;
+        line-height: 40px;
+        font-size: 13px;
+    }
+    #promises {
+        padding-bottom: 2vh;
+    }
+    #promises h2 {
+        padding-top: 8vh;
+        padding-bottom: 8vh;
+
+        font-size: 28px;
+    }
+    .container-promises {
+        width: 90%;
+    }
+    #promises figure {
+        width: 80%;
+        padding-bottom: 5vh;
+    }
+    #promises figcaption {
+        margin-top: 35px;
+    }
+    #portfolio {
+        padding-bottom: 5vh;
+    }
+    .slide {
+        flex-direction: column;
+    }
+    #slideshow {
+        padding-top: 113%; 
+    }
+    #portfolio h2 {
+        padding-top: 8vh;
+        padding-bottom: 5vh;
+        font-size: 28px;
+    }
+    .portfolio-leftside {
+        width: 100%;
+        padding-right: 0%;
+    }
+    .portfolio-leftside img {
+        width: 100%;
+        padding-bottom: 20px;
+    }
+    .portfolio-rightside {
+        width: 100%;
+    }
+    .dot {
+        height: 10px;
+        width: 10px;
+    }
+    #contact {
+        padding-bottom: 4vh;
+        padding-top: 2vh;
+    }
+    #contact h4 {
+        padding-top: 5vh;
+        padding-bottom: 5vh;
+        padding-left: 15%;
+        font-size: 38px;
+    }
+    .contact-form {
+        padding-left: 15%;
+        padding-right: 15%;
+        width: 100%;
+    }
+    .input-container {
+        width: 40%;
+    }
+    .input-text {
+        width: 75%;
+        margin-right: 0%;
+    }
+    .input-text-message {
+        width: 70%;
+    }
+    input {
+        height: 40px;
+        margin-bottom: 40px;
+        font-size: 14px;
+    }
+    textarea {
+        margin-bottom: 40px;
+        font-size: 14px;
+    }
+    input[type="text"], input[type="email"],
+    textarea[type="text"] {
+        font-size: 14px;
+    }
+    .info {
+        width: 100%;
+        position: relative;
+        top: 40px;
+        left: 15%;
+    }
+    .info figure {
+        padding-bottom: 20px;
+    }
+    .info .social-icons {
+        padding-top: 40px;
+        padding-bottom: 60px;
+    }
+    .info .social-icons svg {
+        height: 22px;
+        width: auto;
+        padding-right: 20px;
+        padding-left: 0;
+    }
+    .message-sent {
+        width: 70%;
+    }
+}
+@media screen and (min-width: 550px)and (orientation: portrait) {
+    #slideshow {
+        padding-top: 90%; 
+    }
+}
+@media screen and (min-width: 750px)and (orientation: portrait) {
+    header {
+        padding-top: 3vh;
+        font-size: 24px;
+    }
+    #presentation {
+        padding-top: 90%;
+    }
+    #presentation h1 {
+        font-size: 42px;
+    }
+    #promises figure {
+        width: 40%;
+    }
+    #slideshow {
+        padding-top: 80%; 
+    }
+}
+@media screen and (min-width: 850px)and (orientation: portrait) {
+    #presentation {
+        padding-top: 70%;
+    }
+}
+@media screen and (max-width: 500px) {
+    #presentation {
+        padding-top: 105%;
+    }
+    #presentation .text {
+        width: 90%;
+        top: 16%;
+    }
+    #presentation h1 {
+        font-size: 32px;
+    }
+    #presentation h4 {
+        font-size: 14px;
+        max-width: 90%;
+    }
+    .btn {
+        height: 40px;
+        width: 150px;
+        border-radius: 40px;
+        line-height: 40px;
+        font-size: 12px;
+    }
+    #promises h2 {
+        padding-top: 5vh;
+        padding-bottom: 5vh;
+        font-size: 24px;
+    }
+    #promises figure img {
+        height: 75px;
+    }
+    #portfolio h2 {
+        padding-top: 5vh;
+        padding-bottom: 5vh;
+        font-size: 24px;
+    }
+    #contact {
+        padding-bottom: 4vh;
+        padding-top: 2vh;
+    }
+    #contact h4 {
+        padding-top: 5vh;
+        padding-bottom: 5vh;
+        padding-left: 15%;
+        font-size: 38px;
+    }
+    .contact-form {
+        padding-left: 15%;
+        padding-right: 15%;
+        width: 100%;
+    }
+    .input-container {
+        width: 40%;
+    }
+    .input-text {
+        width: 75%;
+        margin-right: 0%;
+    }
+    .input-text-message {
+        width: 70%;
+    }
+    input {
+        height: 40px;
+        margin-bottom: 40px;
+        font-size: 14px;
+    }
+    textarea {
+        margin-bottom: 40px;
+        font-size: 14px;
+    }
+    input[type="text"], input[type="email"],
+    textarea[type="text"] {
+        font-size: 14px;
+    }
+    .info {
+        width: 100%;
+        position: relative;
+        top: 40px;
+        left: 15%;
+    }
+    .info figure {
+        padding-bottom: 20px;
+    }
+    .info .social-icons {
+        padding-top: 40px;
+        padding-bottom: 60px;
+    }
+    .info .social-icons svg {
+        height: 22px;
+        width: auto;
+        padding-right: 20px;
+        padding-left: 0;
+    }
+    .message-sent {
+        width: 70%;
+    }
+    #slideshow {
+        padding-top: 120%; 
+    }
+}
+@media screen and (max-width: 450px) {
+    #presentation {
+        padding-top: 105%;
+    }
+    header {
+        font-size: 18px;
+    }
+    #presentation .text {
+        top: 15%;
+    }
+    #presentation h1, #contact h4 {
+        font-size: 28px;
+    }
+    #presentation h4 {
+        font-size: 12px;
+        padding-top: 3vh;
+        padding-bottom: 3vh;
+    }
+    .btn {
+        height: 36px;
+        width: 130px;
+        border-radius: 36px;
+        line-height: 36px;
+        font-size: 11px;
+    }
+    #promises h2 {
+        font-size: 22px;
+    }
+    #promises figure img {
+        height: 70px;
+    }
+    #promises figcaption {
+        font-size: 18px;
+    }
+    #promises figcaption span {
+        font-size: 14px;
+    }
+    #portfolio h2 {
+        font-size: 22px;
+    }
+    .portfolio-rightside h3 {
+        font-size: 18px;
+    }
+    .portfolio-rightside p {
+        padding-top: 16px;
+        padding-bottom: 16px;
+        font-size: 14px;
+    }
+    .portfolio-rightside ul {
+        padding-top: 14px;
+    }
+    .portfolio-rightside ul li {
+        font-size: 12px;
+    }
+    .dot {
+        margin-top: 30px;
+    }
+}
+@media screen and (max-width: 400px) {
+    .input-container {
+        width: 70%;
+    }
+    .input-text {
+        width: 100%;
+    }
+    .info figcaption {
+        font-size: 14px;
+    }
+    #presentation {
+        padding-top: 115%;
+    }
+    #slideshow {
+        padding-top: 132%; 
+    }
+}
+@media screen and (max-width: 350px) {
+    #presentation {
+        padding-top: 130%;
+    }
+    header {
+        font-size: 16px;
+    }
+    #presentation h1, #contact h4 {
+        font-size: 25px;
+    }
+    .btn {
+        margin-right: 40%;
+    }
+    #presentation .btn-nocolor {
+        margin-left: 0px;
+        margin-top: 10px;
+    }
+    .language a, .language p {
+        font-size: 10px;
+    }
+    
+    #slideshow {
+        padding-top: 150%; 
+    }
+}
