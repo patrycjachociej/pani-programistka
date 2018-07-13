@@ -66,7 +66,13 @@ header {
     margin-left: auto;
     margin-right: auto;
     
+    display: -webkit-box;
+    
+    display: -ms-flexbox;
+    
     display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
     position: relative;
     z-index: 9999999;
@@ -74,6 +80,7 @@ header {
 
 .header-content h2 {
     text-transform: uppercase;
+    -webkit-transition: 0.3s opacity ease;
     transition: 0.3s opacity ease;
 }
 .header-content h2 span {
@@ -91,6 +98,7 @@ header {
     display: inline;
 	font-size: 14px;
     opacity: 0.5;
+    -webkit-transition: 0.3s opacity ease;
     transition: 0.3s opacity ease;
 }
 .language a:hover {
@@ -125,6 +133,7 @@ header {
     padding-top: 45.1%;
     
 	background: #584CEA;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     color: white;
 }
@@ -137,6 +146,7 @@ header {
     right: 0;
     overflow: hidden;
     z-index: 9999999999999;
+	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
 }
 
@@ -170,15 +180,21 @@ header {
 }
 .btn-primary {    
     background: #847DDF;
+    -webkit-box-shadow: -4px 8px 40px rgba(0, 0, 0, 0.11);
     box-shadow: -4px 8px 40px rgba(0, 0, 0, 0.11);
+    -webkit-transition: 0.3s -webkit-filter linear, 0.3s -webkit-box-shadow linear;
+    transition: 0.3s -webkit-filter linear, 0.3s -webkit-box-shadow linear;
     transition: 0.3s filter linear, 0.3s box-shadow linear;
+    transition: 0.3s filter linear, 0.3s box-shadow linear, 0.3s -webkit-filter linear, 0.3s -webkit-box-shadow linear;
 }
 
 .btn-nocolor {    
     background: transparent;
 }
 .btn-primary:hover {
+    -webkit-filter: brightness(109%);
     filter: brightness(109%);
+    -webkit-box-shadow: -1px 4px 30px rgba(0, 0, 0, 0.08);
     box-shadow: -1px 4px 30px rgba(0, 0, 0, 0.08);
 }
 #presentation .btn-nocolor {    
@@ -203,14 +219,32 @@ header {
 
 /* WAVES */
 
-@keyframes move_wave {
+@-webkit-keyframes move_wave {
   0% {
+    -webkit-transform: translateX(0) translateZ(0) scaleY(1);
     transform: translateX(0) translateZ(0) scaleY(1);
   }
   50% {
+    -webkit-transform: translateX(-25%) translateZ(0) scaleY(0.55);
     transform: translateX(-25%) translateZ(0) scaleY(0.55);
   }
   100% {
+    -webkit-transform: translateX(-50%) translateZ(0) scaleY(1);
+    transform: translateX(-50%) translateZ(0) scaleY(1);
+  }
+}
+
+@keyframes move_wave {
+  0% {
+    -webkit-transform: translateX(0) translateZ(0) scaleY(1);
+    transform: translateX(0) translateZ(0) scaleY(1);
+  }
+  50% {
+    -webkit-transform: translateX(-25%) translateZ(0) scaleY(0.55);
+    transform: translateX(-25%) translateZ(0) scaleY(0.55);
+  }
+  100% {
+    -webkit-transform: translateX(-50%) translateZ(0) scaleY(1);
     transform: translateX(-50%) translateZ(0) scaleY(1);
   }
 }
@@ -248,6 +282,7 @@ header {
     height: 100%;
     background-repeat: repeat no-repeat;
     background-position: 0 bottom;
+    -webkit-transform-origin: center bottom;
     transform-origin: center bottom;
     bottom: -1px;
 }
@@ -266,6 +301,7 @@ header {
     background-image: url('img/c.png');
 }
 .wave-animation .wave-middle {
+    -webkit-animation: move_wave 10s linear infinite;
     animation: move_wave 10s linear infinite;
 }
 .wave-bottom {
@@ -273,6 +309,7 @@ header {
     background-image: url('img/a.png');
 }
 .wave-animation .wave-bottom {
+    -webkit-animation: move_wave 15s linear infinite;
     animation: move_wave 15s linear infinite;
 }
 
@@ -285,6 +322,7 @@ header {
 	overflow: hidden;
     
 	background: white;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     color: #584CEA; 
 }
@@ -301,19 +339,35 @@ header {
     margin-left: auto;
     margin-right: auto;
     
+    display: -webkit-box;
+    
+    display: -ms-flexbox;
+    
     display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: row wrap;
     flex-flow: row wrap;
 }
 #promises figure {
     width: 26%;
+	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
     
     margin-left: auto;
     margin-right: auto;
     padding-bottom: 10vh;
     
+    display: -webkit-box;
+    
+    display: -ms-flexbox;
+    
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
 }
 #promises figure img {
@@ -342,6 +396,7 @@ header {
     padding-bottom: 14vh;
     
 	background: white;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     color: #584CEA; 
 }
@@ -352,6 +407,8 @@ header {
     
     height: 40px;
     width: auto;
+    
+    -webkit-transform: rotate(180deg);
     
     transform: rotate(180deg);
 }
@@ -376,6 +433,10 @@ header {
 	width: 70%;
     margin-left: auto;
     margin-right: auto;
+    
+    display: -webkit-box;
+    
+    display: -ms-flexbox;
     
     display: flex;
     
@@ -453,6 +514,7 @@ header {
     background-color: lightgray;
     border-radius: 50%;
     display: inline-block;
+    -webkit-transition: background-color 0.6s ease;
     transition: background-color 0.6s ease;
 }
 
@@ -470,6 +532,7 @@ header {
     padding-top: 4vh;
     
 	background: #584CEA;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     
     color: white;
@@ -489,10 +552,16 @@ header {
 .contact-form {
 	padding-left: 15%;
     width: 50%;
+	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
 }
 .inputs-2 {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: row wrap;
     flex-flow: row wrap;
 }
 .input-container {
@@ -563,6 +632,8 @@ textarea {
     left: 65%;
 }
 .info figure {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     
     padding-bottom: 30px;
@@ -584,6 +655,7 @@ textarea {
     padding-left: 20px;
 }
 .info .social-icons svg path {
+    -webkit-transition: 0.2s all linear;
     transition: 0.2s all linear;
 }
 svg:hover path {
@@ -602,6 +674,7 @@ footer {
     padding-bottom: 20px;
     padding-left: 15%;
     background: #584CEA;
+	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
     
     font-size: 14px;
@@ -1057,6 +1130,9 @@ footer {
         padding-bottom: 5vh;
     }
     .slide {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
     }
     #slideshow {
