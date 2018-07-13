@@ -99,7 +99,44 @@ session_start();
         <section id="portfolio">
             <h2>CHWALIPIĘTA</h2>
             <div id="slideshow">
-                <div class="slide">
+				<div class="slide">
+                    <div class="portfolio-leftside">
+                        <img src="img/musko.png" alt="Muśko Team Website">
+                    </div>
+                    <div class="portfolio-rightside">
+                        <h3><a href="http://musko-team.pl/testowy/">Muśko-Team.pl [testowanie]</a></h3>
+                        <p>Strona WWW zakodowana według projektu PSD na zlecenie firmy Muśko-Team.</p>
+                        <a href="http://musko-team.pl/testowy/"><strong>ZOBACZ STRONĘ <img src="img/external-link-symbol.svg" alt="Link symbol"></strong></a>
+                        <ul class="portfolio-technologies">
+                            <li>HTML5</li>
+                            <li>CSS3</li>
+                            <li>JavaScript</li>
+                            <li>JQuery</li>
+                            <li>PHP</li>
+                            <li>RWD</li>
+                        </ul>
+                    </div>
+                </div>
+				<div class="slide fade">
+                    <div class="portfolio-leftside">
+                        <img src="img/ro-tech.png" alt="Ro-Tech">
+                    </div>
+                    <div class="portfolio-rightside">
+                        <h3><a href="http://ro-tech.pl/">Ro-Tech.pl</a></h3>
+                        <p>Strona WWW zakodowana według projektu PSD na zlecenie firmy Ro-Tech z własnym systemem CMS.</p>
+                        <a href="http://ro-tech.pl/"><strong>ZOBACZ STRONĘ <img src="img/external-link-symbol.svg" alt="Link symbol"></strong></a>
+                        <ul class="portfolio-technologies">
+                            <li>HTML5</li>
+                            <li>CSS3</li>
+                            <li>JavaScript</li>
+                            <li>JQuery</li>
+                            <li>PHP</li>
+                            <li>MySQL</li>
+                            <li>RWD</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="slide fade">
                     <div class="portfolio-leftside">
                         <img src="img/panikadrowa-bg-2.png" alt="Pani Kadrowa">
                     </div>
@@ -123,9 +160,9 @@ session_start();
                         <img src="img/fitfoodies.eu-screen.png" alt="FitFoodies">
                     </div>
                     <div class="portfolio-rightside">
-                        <h3><a href="http://fitfoodies.eu/">FitFoodies.eu</a></h3>
+                        <h3><a href="http://fitfoodies.eu/">FitFoodies.pl</a></h3>
                         <p>Strona WWW zakodowana według projektu PSD na zlecenie FitFoodies.</p>
-                        <a href="http://fitfoodies.eu/"><strong>ZOBACZ STRONĘ <img src="img/external-link-symbol.svg" alt="link symbol"></strong></a>
+                        <a href="http://fitfoodies.pl/"><strong>ZOBACZ STRONĘ <img src="img/external-link-symbol.svg" alt="link symbol"></strong></a>
                         <ul class="portfolio-technologies">
                             <li>HTML5</li>
                             <li>CSS3</li>
@@ -141,7 +178,7 @@ session_start();
                     </div>
                     <div class="portfolio-rightside">
                         <h3><a href="#">Pani Programistka</a></h3>
-                        <p>Strona WWW w pełni zaprojektowana i zakodowana przeze mnie. </p>
+                        <p>Strona wizytówka w pełni zaprojektowana i zakodowana przeze mnie. </p>
                         <a href="#"><strong>ZOBACZ STRONĘ <img src="img/external-link-symbol.svg" alt="Link symbol"></strong></a>
                         <ul class="portfolio-technologies">
                             <li>HTML5</li>
@@ -193,11 +230,11 @@ session_start();
             <div class="info">
                 <figure>
                     <img src="img/close-envelope.svg" alt="E-mail icon">
-                    <figcaption>patrycja.chociej@gmail.com</figcaption>
+					<figcaption><a href="mailto:patrycja.chociej@gmail.com">patrycja.chociej@gmail.com</a></figcaption>
                 </figure>
                 <figure>
                     <img src="img/phone-receiver.svg" alt="Phone icon">
-                    <figcaption>(+48) 692-727-929</figcaption>
+                    <figcaption><a href="tel:+48692727929">(+48) 692-727-929</a></figcaption>
                 </figure>
                 <figure>
                     <img src="img/facebook-placeholder-for-locate-places-on-maps.svg" alt="Location icon">

@@ -98,9 +98,46 @@ session_start();
         </section>
         
         <section id="portfolio">
-            <h2>BRAGGART</h2>
+            <h2>THE BEST OF</h2>
             <div id="slideshow">
-                <div class="slide">
+				<div class="slide">
+                    <div class="portfolio-leftside">
+                        <img src="img/musko.png" alt="Muśko Team Website">
+                    </div>
+                    <div class="portfolio-rightside">
+                        <h3><a href="http://musko-team.pl/testowy/">Muśko-Team.pl [testing]</a></h3>
+                        <p>Website coded according to the PSD project commissioned by Muśko-Team company.</p>
+                        <a href="http://musko-team.pl/testowy/"><strong>SEE THE WEBSITE <img src="img/external-link-symbol.svg" alt="Link symbol"></strong></a>
+                        <ul class="portfolio-technologies">
+                            <li>HTML5</li>
+                            <li>CSS3</li>
+                            <li>JavaScript</li>
+                            <li>JQuery</li>
+                            <li>PHP</li>
+                            <li>RWD</li>
+                        </ul>
+                    </div>
+                </div>
+				<div class="slide fade">
+                    <div class="portfolio-leftside">
+                        <img src="img/ro-tech.png" alt="Ro-Tech">
+                    </div>
+                    <div class="portfolio-rightside">
+                        <h3><a href="http://ro-tech.pl/">Ro-Tech.pl</a></h3>
+                        <p>Website coded according to the PSD project commissioned by Ro-Tech company with custom CMS.</p>
+                        <a href="http://ro-tech.pl/"><strong>SEE THE WEBSITE <img src="img/external-link-symbol.svg" alt="Link symbol"></strong></a>
+                        <ul class="portfolio-technologies">
+                            <li>HTML5</li>
+                            <li>CSS3</li>
+                            <li>JavaScript</li>
+                            <li>JQuery</li>
+                            <li>PHP</li>
+                            <li>MySQL</li>
+                            <li>RWD</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="slide fade">
                     <div class="portfolio-leftside">
                         <img src="img/panikadrowa-bg-2.png" alt="Pani Kadrowa">
                     </div>
